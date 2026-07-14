@@ -18,86 +18,88 @@ export function PublicLayout() {
 
   return (
     <div className="min-h-dvh bg-[var(--color-warm-canvas)]">
-      <header className="sticky top-0 z-40 border-b border-[var(--color-sand)] bg-[var(--color-warm-canvas)]/95 backdrop-blur-sm">
-        <div className="page-wrap flex items-center justify-between gap-4 py-4">
-          <Link to="/" className="flex shrink-0 items-center gap-3" onClick={() => setOpen(false)}>
-            <div className="flex h-11 w-11 items-center justify-center rounded-[14px] bg-[var(--color-ember-orange)] text-sm font-semibold text-white">
-              GV
-            </div>
-            <div className="hidden sm:block">
-              <p className="text-sm font-medium leading-tight">{SCHOOL.name}</p>
-              <p className="text-[10px] font-medium uppercase tracking-[0.14em] text-[var(--color-primary)]">
-                Learn · Lead · Succeed
-              </p>
-            </div>
-          </Link>
-
-          <nav className="hidden items-center gap-0.5 lg:flex">
-            {links.map((l) => (
-              <NavLink
-                key={l.to}
-                to={l.to}
-                end={l.end}
-                className={({ isActive }) =>
-                  `relative px-3 py-2 text-[13px] font-medium transition-colors ${
-                    isActive
-                      ? 'text-[var(--color-primary)] after:absolute after:bottom-0 after:left-3 after:right-3 after:h-0.5 after:rounded-full after:bg-[var(--color-primary)]'
-                      : 'text-[var(--color-slate)] hover:text-[var(--color-primary)]'
-                  }`
-                }
-              >
-                {l.label}
-              </NavLink>
-            ))}
-          </nav>
-
-          <div className="flex items-center gap-2">
-            <Link to="/login" className="btn-outline hidden sm:inline-flex">
-              <User size={16} />
-              Login
+      <header className="sticky top-3 z-40 px-3 sm:top-4 sm:px-4">
+        <div className="page-wrap">
+          <div className="flex items-center justify-between gap-4 rounded-full border border-[var(--color-sand)] bg-[var(--color-warm-canvas)]/90 py-2.5 pl-3 pr-3 shadow-[0_1px_0_rgba(14,14,15,0.03)] backdrop-blur-md sm:pl-4 sm:pr-4">
+            <Link to="/" className="flex shrink-0 items-center gap-3" onClick={() => setOpen(false)}>
+              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[var(--color-ember-orange)] text-sm font-semibold text-white">
+                GV
+              </div>
+              <div className="hidden sm:block">
+                <p className="text-sm font-medium leading-tight">{SCHOOL.name}</p>
+                <p className="text-[10px] font-medium uppercase tracking-[0.14em] text-[var(--color-primary)]">
+                  Learn · Lead · Succeed
+                </p>
+              </div>
             </Link>
-            <Link to="/admissions/apply" className="btn-primary hidden sm:inline-flex">
-              Apply Now
-              <span aria-hidden>→</span>
-            </Link>
-            <button
-              type="button"
-              className="btn-ghost lg:hidden"
-              aria-label={open ? 'Close menu' : 'Open menu'}
-              onClick={() => setOpen((v) => !v)}
-            >
-              {open ? <X size={22} /> : <Menu size={22} />}
-            </button>
-          </div>
-        </div>
 
-        {open ? (
-          <nav className="border-t border-[var(--color-sand)] px-4 py-3 lg:hidden">
-            <div className="flex flex-col gap-1">
+            <nav className="hidden items-center gap-0.5 lg:flex">
               {links.map((l) => (
                 <NavLink
                   key={l.to}
                   to={l.to}
                   end={l.end}
                   className={({ isActive }) =>
-                    `rounded-[var(--radius-button)] px-3 py-2.5 text-sm font-medium ${isActive ? 'bg-white text-[var(--color-primary)]' : 'text-[var(--color-slate)]'}`
+                    `relative rounded-full px-3.5 py-2 text-[13px] font-medium transition-colors ${
+                      isActive
+                        ? 'bg-[var(--color-ember-orange)]/10 text-[var(--color-primary)]'
+                        : 'text-[var(--color-slate)] hover:bg-[var(--color-ink-black)]/5 hover:text-[var(--color-primary)]'
+                    }`
                   }
-                  onClick={() => setOpen(false)}
                 >
                   {l.label}
                 </NavLink>
               ))}
-              <div className="mt-2 flex gap-2 border-t border-[var(--color-sand)] pt-3">
-                <Link to="/login" className="btn-outline flex-1" onClick={() => setOpen(false)}>
-                  Login
-                </Link>
-                <Link to="/admissions/apply" className="btn-primary flex-1" onClick={() => setOpen(false)}>
-                  Apply Now
-                </Link>
-              </div>
+            </nav>
+
+            <div className="flex items-center gap-2">
+              <Link to="/login" className="btn-outline hidden sm:inline-flex">
+                <User size={16} />
+                Login
+              </Link>
+              <Link to="/admissions/apply" className="btn-primary hidden sm:inline-flex">
+                Apply Now
+                <span aria-hidden>→</span>
+              </Link>
+              <button
+                type="button"
+                className="btn-ghost !rounded-full lg:hidden"
+                aria-label={open ? 'Close menu' : 'Open menu'}
+                onClick={() => setOpen((v) => !v)}
+              >
+                {open ? <X size={20} /> : <Menu size={20} />}
+              </button>
             </div>
-          </nav>
-        ) : null}
+          </div>
+
+          {open ? (
+            <nav className="mt-2 rounded-[24px] border border-[var(--color-sand)] bg-[var(--color-warm-canvas)]/95 px-4 py-3 backdrop-blur-md lg:hidden">
+              <div className="flex flex-col gap-1">
+                {links.map((l) => (
+                  <NavLink
+                    key={l.to}
+                    to={l.to}
+                    end={l.end}
+                    className={({ isActive }) =>
+                      `rounded-[var(--radius-button)] px-3 py-2.5 text-sm font-medium ${isActive ? 'bg-white text-[var(--color-primary)]' : 'text-[var(--color-slate)]'}`
+                    }
+                    onClick={() => setOpen(false)}
+                  >
+                    {l.label}
+                  </NavLink>
+                ))}
+                <div className="mt-2 flex gap-2 border-t border-[var(--color-sand)] pt-3">
+                  <Link to="/login" className="btn-outline flex-1" onClick={() => setOpen(false)}>
+                    Login
+                  </Link>
+                  <Link to="/admissions/apply" className="btn-primary flex-1" onClick={() => setOpen(false)}>
+                    Apply Now
+                  </Link>
+                </div>
+              </div>
+            </nav>
+          ) : null}
+        </div>
       </header>
 
       <Outlet />

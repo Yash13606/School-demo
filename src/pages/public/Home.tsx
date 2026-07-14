@@ -155,12 +155,12 @@ export default function HomePage() {
             <p className="text-lg text-[var(--color-pewter)] mb-8 leading-relaxed">
               Founded in {SCHOOL.founded}, {SCHOOL.name} serves {SCHOOL.students.toLocaleString()} students with dedicated labs, library, sports fields, and performing arts spaces on a secure hillside campus.
             </p>
-            <Link to="/about" className="btn-outline text-[var(--color-burnt-rust)] border-[var(--color-burnt-rust)] hover:bg-[var(--color-burnt-rust)] hover:text-white rounded-full px-8">
+            <Link to="/about" className="btn-outline !text-[var(--color-ember-orange)] !border-[var(--color-ember-orange)] hover:!bg-[var(--color-ember-orange)] hover:!text-white rounded-full px-8">
               Know More About Us <ArrowRight size={18} />
             </Link>
           </div>
-          <div className="relative aspect-[4/3] w-full rounded-[32px] overflow-hidden shadow-xl">
-            <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1200&q=80" alt="School campus" className="absolute inset-0 w-full h-full object-cover" />
+          <div className="relative aspect-[4/3] w-full rounded-[32px] overflow-hidden border border-[var(--color-sand)]">
+            <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1200&q=80" alt="School campus" className="absolute inset-0 w-full h-full object-cover" />
           </div>
         </div>
       </section>
@@ -183,15 +183,15 @@ export default function HomePage() {
                 badge: 'Class Size',
                 body: 'Average 28 students per class so teachers can actually know your child.',
                 image: 'https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=600&q=80',
-                bgColor: 'bg-[#5B8CB9]'
+                bgColor: 'bg-[var(--color-deep-charcoal)]'
               },
               {
                 titleTop: 'Whole-child',
                 titleItalic: 'focus',
                 badge: 'Philosophy',
                 body: 'Academics, sports, arts, and service learning woven into daily rhythm.',
-                image: 'https://images.unsplash.com/photo-1526676037777-05a232554f77?auto=format&fit=crop&w=600&q=80',
-                bgColor: 'bg-[#9ACD32]' 
+                image: 'https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=600&q=80',
+                bgColor: 'bg-[var(--color-sunset-coral)]'
               },
               {
                 titleTop: 'Transparent',
@@ -199,39 +199,39 @@ export default function HomePage() {
                 badge: 'Updates',
                 body: 'Circulars, fees, attendance, and results visible to families in real time.',
                 image: 'https://images.unsplash.com/photo-1512428559087-560fa5ceab42?auto=format&fit=crop&w=600&q=80',
-                bgColor: 'bg-[#9B6B9E]'
+                bgColor: 'bg-[var(--color-gunmetal)]'
               },
               {
                 titleTop: 'Safe hillside',
                 titleItalic: 'campus',
                 badge: 'Security',
                 body: 'Gated grounds, CCTV, trained staff, and structured dismissal procedures.',
-                image: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=600&q=80',
-                bgColor: 'bg-[#D97746]'
+                image: 'https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=600&q=80',
+                bgColor: 'bg-[var(--color-burnt-rust)]'
               }
             ].map((item) => (
-              <div key={item.titleTop} className="p-2.5 rounded-[32px] bg-white/40 backdrop-blur-xl border border-white/60 shadow-[0_8px_32px_rgba(0,0,0,0.05)] group hover:-translate-y-2 transition-transform duration-500 flex flex-col min-h-[580px]">
+              <div key={item.titleTop} className="p-2.5 rounded-[32px] bg-white/40 backdrop-blur-xl border border-white/60 group hover:-translate-y-2 transition-transform duration-500 flex flex-col min-h-[580px]">
                 <div className={`relative h-full rounded-[24px] ${item.bgColor} p-3 flex flex-col flex-grow`}>
-                  
+
                   {/* Top Image & Badge */}
                   <div className="relative mb-6 shrink-0 h-[220px] lg:h-[240px]">
-                    <img src={item.image} className="absolute inset-0 w-full h-full object-cover rounded-[16px] shadow-sm" alt={item.titleTop} />
-                    <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-2 shadow-sm z-10">
-                      <span className="w-2 h-2 rounded-full bg-[#c8d42c]"></span>
+                    <img src={item.image} className="absolute inset-0 w-full h-full object-cover rounded-[16px]" alt={item.titleTop} />
+                    <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-2 z-10">
+                      <span className="w-2 h-2 rounded-full bg-[var(--color-ember-orange)]"></span>
                       <span className="text-[11px] font-semibold tracking-wide text-[var(--color-ink)] uppercase">{item.badge}</span>
                     </div>
                   </div>
-                  
+
                   {/* Text Content */}
                   <div className="px-2 pb-2 flex flex-col flex-grow">
                     <h3 className="text-[28px] leading-[1.1] text-white mb-3 tracking-tight">
                       {item.titleTop} <br/>
-                      <span className="italic font-serif opacity-90">{item.titleItalic}</span>
+                      <span className="italic opacity-90">{item.titleItalic}</span>
                     </h3>
                     <p className="text-white/90 text-[14px] leading-relaxed mb-8">{item.body}</p>
-                    
+
                     {/* Glassy Button */}
-                    <button className="mt-auto w-full py-3.5 rounded-[16px] bg-gradient-to-b from-white/40 to-white/10 border border-white/40 backdrop-blur-md text-[#111] font-semibold text-[15px] shadow-[0_4px_16px_rgba(0,0,0,0.05)] hover:from-white/60 hover:to-white/20 hover:shadow-[0_8px_24px_rgba(0,0,0,0.1)] transition-all">
+                    <button className="mt-auto w-full py-3.5 rounded-[16px] bg-gradient-to-b from-white/40 to-white/10 border border-white/40 backdrop-blur-md text-[var(--color-ink-black)] font-semibold text-[15px] hover:from-white/60 hover:to-white/20 transition-all">
                       Learn More
                     </button>
                   </div>
@@ -251,13 +251,13 @@ export default function HomePage() {
           {[
             {
               icon: BookOpen,
-              image: 'https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=600&q=80',
+              image: 'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=600&q=80',
               title: 'Comprehensive Curriculum',
               body: 'Well-structured curriculum aligned with global standards and focused on conceptual understanding.',
             },
             {
               icon: FlaskConical,
-              image: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=600&q=80',
+              image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80',
               title: 'Experiential Learning',
               body: 'Hands-on experiences, practical exposure and real-world learning beyond textbooks.',
             },
@@ -269,29 +269,29 @@ export default function HomePage() {
             },
             {
               icon: Activity,
-              image: 'https://images.unsplash.com/photo-1526676037777-05a232554f77?auto=format&fit=crop&w=600&q=80',
+              image: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=600&q=80',
               title: 'Sports & Activities',
               body: 'Wide range of sports, arts and clubs to help students explore their interests and talents.',
             },
             {
               icon: Music,
-              image: 'https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?auto=format&fit=crop&w=600&q=80',
+              image: 'https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=600&q=80',
               title: 'Holistic Development',
               body: 'Focus on building confidence, leadership, values and life skills for a bright future.',
             }
           ].map((item) => (
-            <div key={item.title} className="bg-[var(--color-surface)] rounded-[24px] shadow-sm border border-[var(--color-sand)] overflow-hidden flex flex-col group hover:-translate-y-1 transition-transform duration-300">
+            <div key={item.title} className="bg-[var(--color-surface)] rounded-[24px] border border-[var(--color-sand)] overflow-hidden flex flex-col group hover:-translate-y-1 hover:border-[var(--color-driftwood)] transition-all duration-300">
               <div className="relative h-44 w-full shrink-0">
                 <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
                 <div className="absolute -bottom-8 left-1/2 -translate-x-1/2">
-                  <div className="w-16 h-16 rounded-full bg-[var(--color-surface)] flex items-center justify-center p-1.5 shadow-[0_4px_12px_rgba(0,0,0,0.05)]">
+                  <div className="w-16 h-16 rounded-full bg-[var(--color-surface)] border border-[var(--color-sand)] flex items-center justify-center p-1.5">
                     <div className="w-full h-full rounded-full bg-[var(--color-burnt-rust)]/10 text-[var(--color-burnt-rust)] flex items-center justify-center">
                       <item.icon size={24} strokeWidth={1.5} />
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="px-5 pt-14, pb-8 flex flex-col items-center text-center flex-grow">
+              <div className="px-5 pt-14 pb-8 flex flex-col items-center text-center flex-grow">
                 <h3 className="text-[17px] font-semibold text-[var(--color-ink)] mb-3">{item.title}</h3>
                 <p className="text-[14px] text-[var(--color-pewter)] leading-relaxed mb-6">{item.body}</p>
                 <div className="mt-auto text-[var(--color-burnt-rust)] group-hover:translate-x-1 transition-transform">
@@ -301,7 +301,7 @@ export default function HomePage() {
             </div>
           ))}
         </div>
-        <Link to="/academics" className="inline-flex btn-outline text-[var(--color-burnt-rust)] border-[var(--color-burnt-rust)] hover:bg-[var(--color-burnt-rust)] hover:text-white rounded-full px-8">
+        <Link to="/academics" className="inline-flex btn-outline !text-[var(--color-ember-orange)] !border-[var(--color-ember-orange)] hover:!bg-[var(--color-ember-orange)] hover:!text-white rounded-full px-8">
             Explore Academics <ArrowRight size={18} />
         </Link>
       </section>
@@ -315,7 +315,7 @@ export default function HomePage() {
       </section>
 
       <section className="page-wrap py-12">
-        <div className="flex flex-col lg:flex-row bg-[var(--color-ink)] rounded-[32px] overflow-hidden shadow-2xl min-h-[400px]">
+        <div className="flex flex-col lg:flex-row bg-[var(--color-ink)] rounded-[32px] overflow-hidden min-h-[400px]">
           <div className="lg:w-5/12 relative aspect-video lg:aspect-auto z-0">
             <img src="/school_hero.png" alt="Campus Building" className="absolute inset-0 w-full h-full object-cover lg:rounded-r-[100px]" />
           </div>
@@ -362,7 +362,7 @@ export default function HomePage() {
           </div>
           
           <div className="relative z-10 shrink-0 mt-4 md:mt-0">
-            <Link to="/admissions/apply" className="inline-flex items-center justify-center bg-[var(--color-ink)] text-white hover:bg-[var(--color-burnt-rust)] transition-all duration-300 rounded-full px-8 py-4 font-medium text-lg hover:-translate-y-1 hover:shadow-xl">
+            <Link to="/admissions/apply" className="inline-flex items-center justify-center bg-[var(--color-ink)] text-white hover:bg-[var(--color-burnt-rust)] transition-all duration-300 rounded-full px-8 py-4 font-medium text-lg hover:-translate-y-1">
               Start Application <ArrowRight size={20} className="ml-3 transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
@@ -370,43 +370,43 @@ export default function HomePage() {
       </section>
 
       <section className="page-wrap py-16">
-        <div className="relative overflow-hidden rounded-[32px] bg-white border border-[#ECE7E1] p-8 md:p-12 lg:p-16 flex flex-col lg:flex-row items-stretch justify-between gap-8 lg:gap-16 group hover:border-[#D1D5DB] transition-all duration-500 shadow-sm hover:shadow-md">
+        <div className="relative overflow-hidden rounded-[32px] bg-[var(--color-pure-white)] border border-[var(--color-sand)] p-8 md:p-12 lg:p-16 flex flex-col lg:flex-row items-stretch justify-between gap-8 lg:gap-16 group hover:border-[var(--color-driftwood)] transition-all duration-500">
           {/* Subtle accent glow */}
-          <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-[#F97316]/5 rounded-full blur-3xl transition-transform duration-1000 group-hover:scale-125"></div>
-          
+          <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-[var(--color-ember-orange)]/5 rounded-full blur-3xl transition-transform duration-1000 group-hover:scale-125"></div>
+
           <div className="relative z-10 w-full lg:w-7/12 flex flex-col justify-center">
-            <span className="text-xs font-semibold tracking-widest uppercase text-[#F97316] mb-4 block">Get In Touch</span>
-            <h2 className="text-4xl md:text-5xl font-display leading-[1.1] mb-10 text-[#111111]">
+            <span className="text-xs font-semibold tracking-widest uppercase text-[var(--color-ember-orange)] mb-4 block">Get In Touch</span>
+            <h2 className="text-4xl md:text-5xl font-display leading-[1.1] mb-10 text-[var(--color-ink-black)]">
               Visit Us
             </h2>
-            
+
             <div className="flex flex-col gap-6">
               <div className="flex items-start gap-5">
-                <div className="w-12 h-12 rounded-[16px] bg-[#FAF8F5] flex items-center justify-center text-[#111111] shrink-0 group-hover:scale-105 transition-transform duration-300">
+                <div className="w-12 h-12 rounded-[16px] bg-[var(--color-warm-canvas)] flex items-center justify-center text-[var(--color-ink-black)] shrink-0 group-hover:scale-105 transition-transform duration-300">
                   <MapPin size={20} strokeWidth={1.5} />
                 </div>
                 <div className="pt-1.5">
-                  <p className="text-[16px] font-semibold text-[#111111] mb-1.5 leading-snug">12 Ridge Road, Dehradun,<br/>Uttarakhand 248001</p>
-                  <p className="text-[14px] text-[#6B7280]">Mon–Fri 8:30 AM – 4:30 PM &middot; Sat 9:00 AM – 12:30 PM</p>
+                  <p className="text-[16px] font-semibold text-[var(--color-ink-black)] mb-1.5 leading-snug">12 Ridge Road, Dehradun,<br/>Uttarakhand 248001</p>
+                  <p className="text-[14px] text-[var(--color-warm-gray)]">Mon–Fri 8:30 AM – 4:30 PM &middot; Sat 9:00 AM – 12:30 PM</p>
                 </div>
               </div>
 
               <div className="flex items-center gap-5 mt-2">
-                <div className="w-12 h-12 rounded-[16px] bg-[#FAF8F5] flex items-center justify-center text-[#111111] shrink-0 group-hover:scale-105 transition-transform duration-300">
+                <div className="w-12 h-12 rounded-[16px] bg-[var(--color-warm-canvas)] flex items-center justify-center text-[var(--color-ink-black)] shrink-0 group-hover:scale-105 transition-transform duration-300">
                   <Phone size={20} strokeWidth={1.5} />
                 </div>
                 <div>
-                  <p className="text-[16px] font-semibold text-[#111111]">+91 135 274 8800</p>
+                  <p className="text-[16px] font-semibold text-[var(--color-ink-black)]">+91 135 274 8800</p>
                 </div>
               </div>
             </div>
           </div>
-          
-          <div className="relative z-10 w-full lg:w-5/12 shrink-0 bg-[#FAF8F5] rounded-[24px] p-8 lg:p-10 text-center flex flex-col items-center justify-center border border-[#ECE7E1]">
-            <p className="text-[20px] text-[#111111] font-display mb-8 leading-snug">
+
+          <div className="relative z-10 w-full lg:w-5/12 shrink-0 bg-[var(--color-warm-canvas)] rounded-[24px] p-8 lg:p-10 text-center flex flex-col items-center justify-center border border-[var(--color-sand)]">
+            <p className="text-[20px] text-[var(--color-ink-black)] font-display mb-8 leading-snug">
               Questions about admissions or transport?
             </p>
-            <Link to="/contact" className="w-full inline-flex items-center justify-center bg-[#111111] text-white hover:bg-[#222222] transition-all duration-300 rounded-[16px] px-8 py-4.5 font-medium text-[15px] shadow-[0_4px_14px_rgba(0,0,0,0.1)] hover:shadow-[0_6px_20px_rgba(0,0,0,0.15)] hover:-translate-y-0.5">
+            <Link to="/contact" className="w-full inline-flex items-center justify-center bg-[var(--color-ink-black)] text-white hover:bg-[var(--color-ember-orange)] transition-all duration-300 rounded-[16px] px-8 py-4.5 font-medium text-[15px] hover:-translate-y-0.5">
               Contact us <ArrowRight size={18} className="ml-2" />
             </Link>
           </div>

@@ -2,13 +2,10 @@ import React, { useEffect, useRef, useState } from 'react';
 import { InView } from "../../components/ui/in-view";
 import { motion, AnimatePresence } from "framer-motion";
 
-const headingStyle = { fontFamily: '"Playfair Display", serif' };
-const bodyStyle = { fontFamily: '"Inter", sans-serif' };
-
 // --- Animation Helper ---
 function FadeIn({ children, delay = 0, className = '' }: { children: React.ReactNode; delay?: number; className?: string }) {
   const ref = useRef<HTMLDivElement>(null)
-  
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -30,11 +27,11 @@ function FadeIn({ children, delay = 0, className = '' }: { children: React.React
   }, [delay])
 
   return (
-    <div 
-      ref={ref} 
+    <div
+      ref={ref}
       className={className}
-      style={{ 
-        opacity: 0, 
+      style={{
+        opacity: 0,
         transform: 'translateY(20px)',
         transition: 'opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)'
       }}
@@ -78,20 +75,20 @@ export default function GalleryPage() {
     { src: 'https://images.unsplash.com/photo-1460518451285-8f6492976b05?auto=format&fit=crop&w=800&q=80', category: 'Arts & Culture' },
   ];
 
-  const filteredItems = activeCategory === 'All' 
-    ? galleryItems 
+  const filteredItems = activeCategory === 'All'
+    ? galleryItems
     : galleryItems.filter(item => item.category === activeCategory);
 
   return (
-    <div className="min-h-screen bg-[#FAF8F5] pt-40 pb-32">
-      <div className="max-w-[1440px] mx-auto px-6 lg:px-8">
-        
+    <div className="min-h-screen bg-[var(--color-warm-canvas)] pt-40 pb-32">
+      <div className="page-wrap">
+
         <div className="text-center mb-16 mt-8">
           <FadeIn>
-            <h1 className="text-5xl lg:text-[5rem] text-[#111111] mb-6 tracking-tight leading-tight" style={headingStyle}>
+            <h1 className="text-5xl lg:text-[5rem] text-[var(--color-ink-black)] mb-6 tracking-tight leading-tight">
               Our <span className="italic font-light">Gallery</span>
             </h1>
-            <p className="text-[19px] text-[#6B7280] max-w-2xl mx-auto leading-relaxed mb-12" style={bodyStyle}>
+            <p className="text-[19px] text-[var(--color-warm-gray)] max-w-2xl mx-auto leading-relaxed mb-12">
               Explore the vibrant life, academic excellence, and dynamic learning environments that make our community truly special.
             </p>
 
@@ -102,11 +99,10 @@ export default function GalleryPage() {
                   key={category}
                   onClick={() => setActiveCategory(category)}
                   className={`px-6 py-2.5 rounded-full text-[14px] font-medium transition-all duration-300 ${
-                    activeCategory === category 
-                      ? 'bg-[#111111] text-white shadow-[0_4px_14px_rgba(0,0,0,0.1)]' 
-                      : 'bg-white text-[#6B7280] border border-[#ECE7E1] hover:border-[#D1D5DB] hover:text-[#111111]'
+                    activeCategory === category
+                      ? 'bg-[var(--color-ink-black)] text-white'
+                      : 'bg-[var(--color-pure-white)] text-[var(--color-warm-gray)] border border-[var(--color-sand)] hover:border-[var(--color-driftwood)] hover:text-[var(--color-ink-black)]'
                   }`}
-                  style={bodyStyle}
                 >
                   {category}
                 </button>
@@ -138,16 +134,16 @@ export default function GalleryPage() {
                   key={item.src} // Key by source so React knows which item is which
                   className="mb-6 break-inside-avoid"
                 >
-                  <div className="relative group overflow-hidden rounded-2xl border border-[#ECE7E1] bg-white shadow-sm hover:shadow-[0_8px_30px_rgb(0,0,0,0.06)] transition-all duration-500">
+                  <div className="relative group overflow-hidden rounded-2xl border border-[var(--color-sand)] bg-[var(--color-pure-white)] hover:border-[var(--color-driftwood)] transition-all duration-500">
                     <img
                       src={item.src}
                       alt={`${item.category} Gallery Image ${index + 1}`}
                       className="w-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                     />
-                    
+
                     {/* Hover Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                      <span className="text-white text-[13px] font-medium tracking-wide bg-white/20 backdrop-blur-md px-3 py-1 rounded-full border border-white/30" style={bodyStyle}>
+                    <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-ink-black)]/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                      <span className="text-white text-[13px] font-medium tracking-wide bg-white/20 backdrop-blur-md px-3 py-1 rounded-full border border-white/30">
                         {item.category}
                       </span>
                     </div>
@@ -161,7 +157,7 @@ export default function GalleryPage() {
         {/* Load More CTA */}
         <FadeIn delay={400}>
           <div className="mt-24 text-center">
-             <button className="inline-flex items-center justify-center bg-white border border-[#ECE7E1] text-[#111111] rounded-full px-8 py-3.5 text-[15px] font-medium transition-all duration-300 hover:bg-[#FAF8F5] hover:border-[#D1D5DB] shadow-sm" style={bodyStyle}>
+             <button className="inline-flex items-center justify-center bg-[var(--color-pure-white)] border border-[var(--color-sand)] text-[var(--color-ink-black)] rounded-full px-8 py-3.5 text-[15px] font-medium transition-all duration-300 hover:bg-[var(--color-warm-canvas)] hover:border-[var(--color-driftwood)]">
               Load More Images
             </button>
           </div>
