@@ -203,10 +203,10 @@ function CurriculumSection() {
 
 function StagesSection() {
   const stages = [
-    { name: 'EARLY YEARS', age: 'Pre-KG to UKG', desc: 'Play based learning to build curiosity, creativity and social skills.', img: 'https://images.unsplash.com/photo-1544390505-728b9fb6e047?auto=format&fit=crop&q=80&w=400' },
+    { name: 'EARLY YEARS', age: 'Pre-KG to UKG', desc: 'Play based learning to build curiosity, creativity and social skills.', img: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=400' },
     { name: 'PRIMARY SCHOOL', age: 'Grade 1 – 5', desc: 'Building strong foundations with focus on language, numeracy and values.', img: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&q=80&w=400' },
-    { name: 'MIDDLE SCHOOL', age: 'Grade 6 – 8', desc: 'Encouraging analytical thinking, independence and problem solving.', img: 'https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&q=80&w=400' },
-    { name: 'SENIOR SCHOOL', age: 'Grade 9 – 12', desc: 'Preparing for higher education and future careers with excellence.', img: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80&w=400' },
+    { name: 'MIDDLE SCHOOL', age: 'Grade 6 – 8', desc: 'Encouraging analytical thinking, independence and problem solving.', img: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80&w=400' },
+    { name: 'SENIOR SCHOOL', age: 'Grade 9 – 12', desc: 'Preparing for higher education and future careers with excellence.', img: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=400' },
   ]
 
   return (
@@ -240,12 +240,12 @@ function StagesSection() {
 
 function SubjectsSection() {
   const subjects = [
-    { title: 'Mathematics', icon: LineChart, img: 'https://images.unsplash.com/photo-1632524644133-c82736412f91?auto=format&fit=crop&q=80&w=600' },
-    { title: 'Science', icon: Microscope, img: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80&w=600' },
+    { title: 'Mathematics', icon: LineChart, img: 'https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&q=80&w=600' },
+    { title: 'Science', icon: Microscope, img: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=600' },
     { title: 'English', icon: BookOpen, img: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&q=80&w=600' },
     { title: 'Social Studies', icon: Globe, img: 'https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&q=80&w=600' },
     { title: 'Computer Science', icon: MonitorPlay, img: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=600' },
-    { title: 'Languages', icon: Languages, img: 'https://images.unsplash.com/photo-1546410531-bea514b1ba04?auto=format&fit=crop&q=80&w=600' },
+    { title: 'Languages', icon: Languages, img: 'https://images.unsplash.com/photo-1596496181848-3091d4878b24?auto=format&fit=crop&q=80&w=600' },
     { title: 'Arts', icon: Palette, img: 'https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&q=80&w=600' },
     { title: 'Physical Education', icon: Dumbbell, img: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&q=80&w=600' },
   ]
@@ -308,7 +308,7 @@ function BeyondClassroomSection() {
   const largeCards = [
     { title: 'STEM & Innovation', desc: 'Robotics, coding, AI, and maker spaces that spark innovation and prepare for the future.', link: 'Explore STEM', img: 'https://images.unsplash.com/photo-1564069114553-7215e1ff1890?auto=format&fit=crop&q=80&w=800', overlay: 'bg-[var(--color-deep-charcoal)]/80' },
     { title: 'Arts & Creativity', desc: 'Nurturing imagination and expression through music, dance, theatre and visual arts.', link: 'Explore Arts', img: 'https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?auto=format&fit=crop&q=80&w=800', overlay: 'bg-[var(--color-sunset-coral)]/80' },
-    { title: 'Sports & Wellness', desc: 'Building strength, discipline and teamwork through diverse sports programs.', link: 'Explore Sports', img: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&q=80&w=800', overlay: 'bg-[var(--color-gunmetal)]/80' },
+    { title: 'Sports & Wellness', desc: 'Building strength, discipline and teamwork through diverse sports programs.', link: 'Explore Sports', img: 'https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&q=80&w=800', overlay: 'bg-[var(--color-gunmetal)]/80' },
   ]
 
   return (

@@ -216,7 +216,7 @@ function CampusExperienceSection() {
     { name: 'Smart Classrooms', img: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80', span: 'col-span-1 md:col-span-2 lg:col-span-6 row-span-2' },
     { name: 'Science Labs', img: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80', span: 'col-span-1 lg:col-span-3 row-span-1' },
     { name: 'Library', img: 'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&q=80', span: 'col-span-1 lg:col-span-3 row-span-1' },
-    { name: 'Sports Arena', img: 'https://images.unsplash.com/photo-1518605368461-1ee7e163b2f5?auto=format&fit=crop&q=80', span: 'col-span-1 lg:col-span-3 row-span-1' },
+    { name: 'Sports Arena', img: 'https://images.unsplash.com/photo-1571008887538-b36bb32f4571?auto=format&fit=crop&q=80', span: 'col-span-1 lg:col-span-3 row-span-1' },
     { name: 'Arts Studio', img: 'https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&q=80', span: 'col-span-1 lg:col-span-3 row-span-1' },
     { name: 'Innovation Lab', img: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80', span: 'col-span-1 md:col-span-2 lg:col-span-6 row-span-1' },
   ]
@@ -429,7 +429,8 @@ function FAQAndCTASection() {
                     </div>
                   </button>
                   <div
-                    className={`overflow-hidden transition-all duration-300 ease-in-out bg-[var(--color-warm-canvas)]/50 ${openIndex === i ? 'max-h-[200px] opacity-100' : 'max-h-0 opacity-0'}`}
+                    className={`overflow-hidden transition-all duration-300 ease-in-out bg-[var(--color-warm-canvas)]/50 ${openIndex === i ? 'opacity-100' : 'opacity-0'}`}
+                    style={{ maxHeight: openIndex === i ? '240px' : '0px' }}
                   >
                     <p className="text-[var(--color-warm-gray)] text-sm leading-relaxed px-6 pb-5 pt-1">{faq.a}</p>
                   </div>
