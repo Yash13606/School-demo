@@ -333,7 +333,7 @@ export default function HomePage() {
                <Link to="/admissions/apply" className="inline-flex items-center justify-center bg-[var(--color-burnt-rust)] text-white hover:bg-[#c84b24] transition-colors rounded-full px-8 py-3.5 font-medium">
                  Apply for Admission <ArrowRight size={18} className="ml-2" />
                </Link>
-               <Link to="/admissions/tour" className="inline-flex items-center justify-center border border-white/30 text-white hover:bg-white/10 transition-colors rounded-full px-8 py-3.5 font-medium">
+               <Link to="/contact" className="inline-flex items-center justify-center border border-white/30 text-white hover:bg-white/10 transition-colors rounded-full px-8 py-3.5 font-medium">
                  Take a Campus Tour <Calendar size={18} className="ml-2" />
                </Link>
              </div>

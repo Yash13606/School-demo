@@ -47,7 +47,7 @@ export default function GalleryPage() {
 
   const galleryItems = [
     { src: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80', category: 'Academics' },
-    { src: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=800&q=80', category: 'Campus Life' },
+    { src: 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=800&q=80', category: 'Campus Life' },
     { src: 'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=800&q=80', category: 'Academics' },
     { src: 'https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=800&q=80', category: 'Campus Life' },
     { src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80', category: 'Academics' },
@@ -59,7 +59,7 @@ export default function GalleryPage() {
     { src: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=800&q=80', category: 'Campus Life' },
     { src: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80', category: 'Campus Life' },
     { src: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80', category: 'Academics' },
-    { src: 'https://images.unsplash.com/photo-1427504494785-319ce1473799?auto=format&fit=crop&w=800&q=80', category: 'Campus Life' },
+    { src: 'https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=800&q=80', category: 'Campus Life' },
     { src: 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80', category: 'Academics' },
     { src: 'https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?auto=format&fit=crop&w=800&q=80', category: 'Academics' },
     { src: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80', category: 'Academics' },
@@ -71,8 +71,8 @@ export default function GalleryPage() {
     { src: 'https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=800&q=80', category: 'Sports' },
     { src: 'https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=800&q=80', category: 'Sports' },
     { src: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=800&q=80', category: 'Arts & Culture' },
-    { src: 'https://images.unsplash.com/photo-1510915361894-faa8b41da483?auto=format&fit=crop&w=800&q=80', category: 'Arts & Culture' },
-    { src: 'https://images.unsplash.com/photo-1460518451285-8f6492976b05?auto=format&fit=crop&w=800&q=80', category: 'Arts & Culture' },
+    { src: 'https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=800&q=80', category: 'Arts & Culture' },
+    { src: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=800&q=80', category: 'Arts & Culture' },
   ];
 
   const filteredItems = activeCategory === 'All'

@@ -51,7 +51,7 @@ function HeroSection() {
             More than a school. A community where curiosity, confidence and character grow together.
           </p>
           <div className="flex flex-wrap items-center gap-4">
-            <Link to="/admissions/tour" className="inline-flex items-center justify-center bg-[var(--color-ember-orange)] text-white rounded-full px-8 py-3.5 font-medium hover:bg-[var(--color-burnt-rust)] transition-colors">
+            <Link to="/contact" className="inline-flex items-center justify-center bg-[var(--color-ember-orange)] text-white rounded-full px-8 py-3.5 font-medium hover:bg-[var(--color-burnt-rust)] transition-colors">
               Explore Campus <ArrowRight size={18} className="ml-2" />
             </Link>
             <Link to="/admissions/apply" className="inline-flex items-center justify-center border border-[var(--color-sand)] text-[var(--color-ink-black)] bg-[var(--color-pure-white)] rounded-full px-8 py-3.5 font-medium hover:border-[var(--color-ink-black)] transition-colors">
@@ -458,7 +458,7 @@ function FAQAndCTASection() {
                   <Link to="/admissions/apply" className="inline-flex w-full sm:w-auto items-center justify-center bg-[var(--color-ember-orange)] text-white rounded-full px-6 py-3.5 text-sm font-medium hover:bg-[var(--color-burnt-rust)] hover:-translate-y-0.5 transition-all duration-300">
                     Apply for Admission <ArrowRight size={16} className="ml-2" />
                   </Link>
-                  <Link to="/admissions/tour" className="inline-flex w-full sm:w-auto items-center justify-center bg-[var(--color-pure-white)] text-[var(--color-ink-black)] hover:bg-[var(--color-warm-canvas)] rounded-full px-6 py-3.5 text-sm font-medium hover:-translate-y-0.5 transition-all duration-300">
+                  <Link to="/contact" className="inline-flex w-full sm:w-auto items-center justify-center bg-[var(--color-pure-white)] text-[var(--color-ink-black)] hover:bg-[var(--color-warm-canvas)] rounded-full px-6 py-3.5 text-sm font-medium hover:-translate-y-0.5 transition-all duration-300">
                     Schedule a Campus Visit <ArrowRight size={16} className="ml-2" />
                   </Link>
                 </div>

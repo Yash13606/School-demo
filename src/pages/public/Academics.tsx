@@ -432,7 +432,7 @@ function AcademicsCTASection() {
               <Link to="/admissions/apply" className="inline-flex w-full sm:w-auto items-center justify-center bg-[var(--color-ember-orange)] text-white rounded-full px-6 py-3.5 text-sm font-medium hover:bg-[var(--color-burnt-rust)] hover:-translate-y-0.5 transition-all duration-300">
                 Apply for Admission <ArrowRight size={16} className="ml-2" />
               </Link>
-              <Link to="/admissions/tour" className="inline-flex w-full sm:w-auto items-center justify-center bg-[var(--color-pure-white)] text-[var(--color-ink-black)] hover:bg-[var(--color-warm-canvas)] rounded-full px-6 py-3.5 text-sm font-medium hover:-translate-y-0.5 transition-all duration-300">
+              <Link to="/contact" className="inline-flex w-full sm:w-auto items-center justify-center bg-[var(--color-pure-white)] text-[var(--color-ink-black)] hover:bg-[var(--color-warm-canvas)] rounded-full px-6 py-3.5 text-sm font-medium hover:-translate-y-0.5 transition-all duration-300">
                 Schedule a Campus Visit <ArrowRight size={16} className="ml-2" />
               </Link>
             </div>

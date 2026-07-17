@@ -67,7 +67,7 @@ function HeroSection() {
                 <Link to="#apply" className="group inline-flex items-center justify-center bg-[var(--color-ember-orange)] text-white rounded-full px-8 py-4 text-[15px] font-medium transition-all duration-300 hover:bg-[var(--color-burnt-rust)] hover:-translate-y-0.5">
                   Apply Now <ArrowRight size={18} strokeWidth={2} className="ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
-                <Link to="#visit" className="group inline-flex items-center justify-center bg-[var(--color-pure-white)] border border-[var(--color-sand)] text-[var(--color-ink-black)] rounded-full px-8 py-4 text-[15px] font-medium transition-all duration-300 hover:bg-[var(--color-warm-canvas)] hover:border-[var(--color-driftwood)]">
+                <Link to="/contact" className="group inline-flex items-center justify-center bg-[var(--color-pure-white)] border border-[var(--color-sand)] text-[var(--color-ink-black)] rounded-full px-8 py-4 text-[15px] font-medium transition-all duration-300 hover:bg-[var(--color-warm-canvas)] hover:border-[var(--color-driftwood)]">
                   Schedule a Visit <Calendar size={18} strokeWidth={2} className="ml-2 text-[var(--color-warm-gray)] group-hover:-translate-y-0.5 transition-transform" />
                 </Link>
               </div>
@@ -437,7 +437,7 @@ function FooterCTASection() {
                 <Link to="#apply" className="group inline-flex items-center justify-center bg-[var(--color-ember-orange)] text-white rounded-full px-8 py-3.5 text-[14px] font-medium transition-all duration-300 hover:bg-[var(--color-burnt-rust)]">
                   Apply Now <ArrowRight size={16} strokeWidth={2} className="ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
-                <Link to="#visit" className="group inline-flex items-center justify-center bg-transparent border border-[var(--color-slate)] text-white rounded-full px-8 py-3.5 text-[14px] font-medium transition-all duration-300 hover:bg-[var(--color-charcoal)]">
+                <Link to="/contact" className="group inline-flex items-center justify-center bg-transparent border border-[var(--color-slate)] text-white rounded-full px-8 py-3.5 text-[14px] font-medium transition-all duration-300 hover:bg-[var(--color-charcoal)]">
                   Schedule a Campus Visit <Calendar size={16} strokeWidth={2} className="ml-2" />
                 </Link>
               </div>
