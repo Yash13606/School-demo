@@ -232,7 +232,7 @@ function TopStoriesAndEvents() {
 
 function NewsGrid() {
   const [activeCategory, setActiveCategory] = useState('All News');
-  const categories = ['All News', 'Achievements', 'Academics', 'Events', 'Initiatives', 'Announcements'];
+  const categories = ['All News', 'Academics', 'Sports', 'Achievements', 'Wellness'];
 
   const gridNews = [
     { cat: 'ACADEMICS', title: 'Tech Club Launches AI Learning Workshop', desc: 'Students explored the future of technology through hands-on AI learning sessions.', date: 'April 28, 2025', img: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80' },
@@ -240,6 +240,10 @@ function NewsGrid() {
     { cat: 'ACHIEVEMENTS', title: 'Olympiad Winners Make Us Proud', desc: 'Several students excel in the International Mathematics Olympiad.', date: 'April 22, 2025', img: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80' },
     { cat: 'WELLNESS', title: 'Mindfulness Session Promotes Well-being', desc: 'Special session conducted for students to promote mental wellness and focus.', date: 'April 20, 2025', img: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80' },
   ];
+
+  const filteredNews = activeCategory === 'All News'
+    ? gridNews
+    : gridNews.filter((news) => news.cat.toLowerCase() === activeCategory.toLowerCase());
 
   return (
     <section className="py-16 bg-[var(--color-pure-white)]">
@@ -277,7 +281,7 @@ function NewsGrid() {
         <FadeIn delay={150}>
           {/* 4-Column Grid */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {gridNews.map((news, idx) => (
+            {filteredNews.map((news, idx) => (
               <div key={idx} className="bg-[var(--color-pure-white)] border border-[var(--color-sand)] rounded-[24px] p-2 flex flex-col hover:border-[var(--color-driftwood)] transition-all duration-300 group cursor-pointer">
                 <div className="overflow-hidden rounded-[20px] aspect-[4/3] mb-5">
                   <img src={news.img} alt={news.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />

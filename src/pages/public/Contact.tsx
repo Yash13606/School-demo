@@ -46,16 +46,19 @@ export default function ContactPage() {
       icon: Mail,
       title: 'Email us',
       detail: 'admissions@school.edu.in',
+      href: 'mailto:admissions@school.edu.in',
     },
     {
       icon: Phone,
       title: 'Call us',
       detail: '+91 135 274 8800',
+      href: 'tel:+911352748800',
     },
     {
       icon: MapPin,
       title: 'Visit us',
       detail: '12 Ridge Road, Dehradun, Uttarakhand 248001',
+      href: 'https://www.google.com/maps/search/?api=1&query=12+Ridge+Road+Dehradun+Uttarakhand+248001',
     }
   ];
 
@@ -91,7 +94,13 @@ export default function ContactPage() {
 
               <div className="bg-[var(--color-pure-white)] rounded-[32px] p-2 border border-[var(--color-sand)]">
                 {contactMethods.map((method, idx) => (
-                  <div key={idx} className="group flex items-center justify-between p-4 rounded-[24px] hover:bg-[var(--color-warm-canvas)] transition-all duration-300 cursor-pointer">
+                  <a
+                    key={idx}
+                    href={method.href}
+                    target={method.href.startsWith('http') ? '_blank' : undefined}
+                    rel={method.href.startsWith('http') ? 'noreferrer' : undefined}
+                    className="group flex items-center justify-between p-4 rounded-[24px] hover:bg-[var(--color-warm-canvas)] transition-all duration-300 cursor-pointer"
+                  >
                     <div className="flex items-center gap-5">
                       <div className="w-14 h-14 rounded-[20px] bg-[var(--color-warm-canvas)] group-hover:bg-[var(--color-pure-white)] border border-transparent group-hover:border-[var(--color-sand)] flex items-center justify-center text-[var(--color-ink-black)] shrink-0 transition-all duration-300">
                         <method.icon size={22} strokeWidth={1.5} />
@@ -104,7 +113,7 @@ export default function ContactPage() {
                     <div className="w-10 h-10 rounded-full flex items-center justify-center text-[var(--color-stone)] group-hover:text-[var(--color-ink-black)] group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-all duration-300 shrink-0">
                       <ArrowUpRight size={20} strokeWidth={1.5} />
                     </div>
-                  </div>
+                  </a>
                 ))}
               </div>
             </FadeIn>
